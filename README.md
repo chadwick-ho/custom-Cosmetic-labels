@@ -35,7 +35,7 @@ GitHub Pages static deployment from the main branch root.
 
 ## GitHub Pages URL
 
-The final URL is available after GitHub Pages finishes publishing this repository.
+https://chadwick-ho.github.io/custom-Cosmetic-labels/
 
 ## How to Update Images
 
