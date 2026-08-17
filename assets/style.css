@@ -67,6 +67,7 @@ textarea {
 .brand,
 .desktop-nav,
 .hero-actions,
+.hero-keywords,
 .hero-stats,
 .trust-band,
 .center-actions,
@@ -290,12 +291,54 @@ h3 {
   line-height: 1.65;
 }
 
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 24px 0 18px;
+}
+
+.metric-card {
+  min-height: 92px;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  padding: 16px 14px;
+  border: 1px solid rgba(16, 42, 79, 0.16);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(16, 42, 79, 0.08);
+}
+
+.metric-card strong {
+  color: var(--navy);
+  font-size: clamp(22px, 2.2vw, 34px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.metric-card:nth-child(2) strong,
+.metric-card:nth-child(4) strong {
+  color: var(--amber);
+}
+
+.metric-card span {
+  color: #33465d;
+  font-size: 11px;
+  line-height: 1.25;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .hero-actions {
   flex-wrap: wrap;
   gap: 12px;
   margin: 26px 0;
 }
 
+.hero-keywords,
 .hero-stats,
 .trust-band,
 .tag-row {
@@ -303,6 +346,7 @@ h3 {
   gap: 10px;
 }
 
+.hero-keywords span,
 .hero-stats span,
 .trust-band span,
 .tag-row span {
@@ -313,6 +357,14 @@ h3 {
   color: #26394e;
   font-size: 14px;
   font-weight: 800;
+}
+
+.hero-keywords span {
+  border-color: rgba(16, 42, 79, 0.24);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .hero-media {
@@ -834,6 +886,10 @@ details p {
     min-height: auto;
   }
 
+  .hero-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-media,
   .hero-media img {
     min-height: 390px;
@@ -895,6 +951,10 @@ details p {
   .hero-media,
   .hero-media img {
     min-height: 290px;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
   }
 
   .product-grid,
