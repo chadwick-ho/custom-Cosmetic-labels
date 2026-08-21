@@ -1,14 +1,14 @@
 ﻿:root {
-  --background: #f7f3ec;
+  --background: #f3efe7;
   --foreground: #172033;
   --navy: #0c2445;
   --blue: #1d5f8e;
   --teal: #108c86;
   --amber: #b9782f;
-  --line: #ddd3c4;
-  --muted: #5f6672;
-  --panel: #fffaf3;
-  --soft: #efe8dd;
+  --line: #d6cebf;
+  --muted: #596679;
+  --panel: #fffdf8;
+  --soft: #ece5d9;
 }
 
 @theme inline {
@@ -27,7 +27,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--background);
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--background) 48%, #ece6db 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -59,7 +59,7 @@ textarea {
   align-items: center;
   gap: 22px;
   padding: 12px clamp(18px, 5vw, 70px);
-  background: rgba(255, 250, 243, 0.96);
+  background: rgba(255, 253, 248, 0.94);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(16px);
 }
@@ -183,7 +183,7 @@ textarea {
 
 .btn.secondary {
   border: 1px solid var(--line);
-  background: #fffaf3;
+  background: rgba(255, 253, 248, 0.92);
   color: var(--navy);
 }
 
@@ -246,7 +246,7 @@ textarea {
   gap: clamp(28px, 5vw, 70px);
   min-height: calc(100vh - 74px);
   padding: clamp(42px, 7vw, 86px) clamp(18px, 5vw, 70px) 48px;
-  background: linear-gradient(90deg, #fffaf3 0%, #fffaf3 46%, #efe8dd 100%);
+  background: linear-gradient(135deg, rgba(255, 253, 248, 0.98) 0%, rgba(247, 242, 233, 0.96) 52%, rgba(235, 228, 216, 0.94) 100%);
 }
 
 .home-hero {
@@ -265,20 +265,7 @@ textarea {
 }
 
 .home-hero::after {
-  content: "";
-  position: absolute;
-  right: -18vw;
-  bottom: -18vw;
-  z-index: -1;
-  width: min(62vw, 840px);
-  height: min(62vw, 840px);
-  border: 1px solid rgba(255, 250, 243, 0.16);
-  background:
-    linear-gradient(135deg, rgba(255, 250, 243, 0.1), rgba(185, 120, 47, 0.12)),
-    repeating-linear-gradient(90deg, rgba(255, 250, 243, 0.14) 0 2px, transparent 2px 58px);
-  transform: rotate(-13deg);
-  animation: labelPanelDrift 14s ease-in-out infinite alternate;
-  pointer-events: none;
+  display: none;
 }
 
 .hero-backdrop::after {
@@ -286,8 +273,8 @@ textarea {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(6, 15, 28, 0.96) 0%, rgba(8, 20, 36, 0.92) 50%, rgba(8, 20, 36, 0.68) 100%),
-    linear-gradient(180deg, rgba(6, 15, 28, 0.12), rgba(6, 15, 28, 0.92));
+    linear-gradient(90deg, rgba(5, 14, 28, 0.94) 0%, rgba(8, 20, 36, 0.84) 46%, rgba(8, 20, 36, 0.52) 100%),
+    linear-gradient(180deg, rgba(6, 15, 28, 0.1), rgba(6, 15, 28, 0.9));
 }
 
 .hero-backdrop img {
@@ -297,8 +284,8 @@ textarea {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  filter: saturate(0.92) contrast(1.06);
-  transform: scale(1.08);
+  filter: saturate(0.98) contrast(1.08) brightness(0.92);
+  transform: scale(1.04);
   animation: heroBackdrop 20s infinite;
 }
 
@@ -491,7 +478,7 @@ h3 {
 
 .hero-keywords span {
   border-color: rgba(16, 42, 79, 0.24);
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 253, 248, 0.72);
   color: var(--navy);
   font-size: 12px;
   font-weight: 900;
@@ -506,10 +493,10 @@ h3 {
 
 .hero-media {
   overflow: hidden;
-  min-height: 500px;
-  border: 1px solid var(--line);
+  min-height: 560px;
+  border: 1px solid rgba(12, 36, 69, 0.08);
   border-radius: 8px;
-  background: #fff;
+  background: linear-gradient(180deg, #fffdf8, #f2ece1);
   box-shadow: 0 24px 70px rgba(16, 42, 79, 0.16);
 }
 
@@ -522,8 +509,9 @@ h3 {
 .hero-media img {
   width: 100%;
   height: 100%;
-  min-height: 500px;
+  min-height: 560px;
   object-fit: cover;
+  object-position: center;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -760,7 +748,7 @@ details {
 }
 
 .tinted {
-  background: var(--soft);
+  background: linear-gradient(180deg, rgba(236, 229, 217, 0.58), rgba(243, 239, 231, 0.82));
 }
 
 .process-card span {
@@ -885,8 +873,9 @@ details p {
 
 .detail-layout aside {
   padding: 24px;
+  border: 1px solid rgba(12, 36, 69, 0.08);
   border-radius: 8px;
-  background: var(--soft);
+  background: linear-gradient(180deg, #fffdf8, #f2ece1);
 }
 
 .contact-options {
@@ -1364,7 +1353,11 @@ details p {
   background: #d5a130;
   color: #101827;
 }
-.page-banner { min-height: auto; }
+.page-banner {
+  min-height: clamp(560px, 76vh, 760px);
+  padding-top: clamp(54px, 8vw, 88px);
+  padding-bottom: clamp(54px, 7vw, 84px);
+}
 .skip-link { position: absolute; left: -999px; top: 12px; z-index: 100; padding: 10px; background: #fff; color: var(--navy); }
 .skip-link:focus { left: 12px; }
 @media (max-width: 1100px) { .icon-grid, .image-tile-grid, .catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
