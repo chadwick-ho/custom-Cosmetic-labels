@@ -959,6 +959,13 @@ details p {
   max-width: 780px;
 }
 
+.article-page .article-meta {
+  margin: -8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
 .article-page header img {
   max-height: 460px;
   margin-top: 24px;
