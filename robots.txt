@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.ytlabels.com/sitemap.xml
+Sitemap: https://www.ytlabels.com/feed.xml
