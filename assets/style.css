@@ -1270,12 +1270,16 @@ details p {
 }
 .catalog-media {
   display: block;
+  height: clamp(200px, 18vw, 270px);
+  overflow: hidden;
   background: #fffaf3;
 }
 .catalog-media img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
+  aspect-ratio: auto;
   object-fit: cover;
+  object-position: center;
 }
 .catalog-body {
   display: grid;
