@@ -1284,8 +1284,8 @@ details p {
 .catalog-body {
   display: grid;
   align-content: start;
-  gap: 12px;
-  padding: 18px;
+  gap: 10px;
+  padding: 16px;
 }
 .catalog-badge {
   width: max-content;
@@ -1300,24 +1300,25 @@ details p {
   text-transform: uppercase;
 }
 .catalog-card h3 {
-  min-height: 50px;
+  min-height: 44px;
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.2;
 }
 .catalog-card p {
-  min-height: 74px;
+  min-height: 58px;
   margin: 0;
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 13px;
+  line-height: 1.48;
 }
 .catalog-tags,
 .catalog-specs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 .catalog-tags span {
-  padding: 7px 9px;
+  padding: 6px 8px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
   color: #f5f7fa;
@@ -1327,7 +1328,7 @@ details p {
 .catalog-specs {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 2px;
+  margin-top: 0;
 }
 .catalog-specs div {
   min-width: 0;
@@ -1349,7 +1350,7 @@ details p {
   color: #ffd36b;
 }
 .catalog-cta {
-  min-height: 42px;
+  min-height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
