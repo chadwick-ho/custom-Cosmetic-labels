@@ -1378,3 +1378,115 @@ details p {
   .catalog-section { padding-inline: 16px; }
   .catalog-card h3, .catalog-card p { min-height: 0; }
 }
+
+/* Materials showcase: an editorial card layout keeps imagery, labels and buyer context legible. */
+.materials-showcase {
+  background: linear-gradient(145deg, #f8f5ef 0%, #efe7da 100%);
+}
+
+.materials-showcase .section-heading {
+  max-width: 760px;
+  margin-bottom: clamp(30px, 4vw, 52px);
+}
+
+.materials-showcase .section-heading h2 {
+  margin-bottom: 14px;
+  font-size: clamp(34px, 4.2vw, 58px);
+}
+
+.materials-showcase .section-heading p:last-child {
+  max-width: 660px;
+  margin: 0 auto;
+  color: #536277;
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.65;
+}
+
+.materials-grid {
+  max-width: 1540px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 1.7vw, 28px);
+  margin: 0 auto;
+}
+
+.material-tile {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(16, 42, 79, 0.15);
+  border-radius: 12px;
+  background: #fffdf9;
+  box-shadow: 0 16px 34px rgba(28, 39, 55, 0.09);
+}
+
+.material-tile img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 260ms ease;
+}
+
+.material-tile:hover img {
+  transform: scale(1.035);
+}
+
+.material-tile figcaption {
+  display: grid;
+  gap: 5px;
+  min-height: 134px;
+  padding: 19px 20px 20px;
+}
+
+.material-tile figcaption span {
+  color: #9a691d;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.material-tile figcaption strong {
+  color: var(--navy);
+  font-size: clamp(18px, 1.45vw, 23px);
+  line-height: 1.18;
+}
+
+.material-tile figcaption p {
+  margin: 2px 0 0;
+  color: #59697d;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.materials-action {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(26px, 3vw, 40px);
+}
+
+.materials-action .btn.secondary {
+  border-color: #102a4f;
+  background: #102a4f;
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .materials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .material-tile figcaption {
+    min-height: 0;
+    padding: 17px 18px 18px;
+  }
+}
