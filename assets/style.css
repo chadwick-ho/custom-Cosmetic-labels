@@ -1422,7 +1422,7 @@ details p {
 
 .material-tile img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: clamp(200px, 18vw, 270px);
   display: block;
   object-fit: cover;
   object-position: center;
