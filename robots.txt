@@ -1,5 +1,21 @@
 User-agent: *
 Allow: /
 
+# Allow selected AI crawlers to access product and guide content.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://www.ytlabels.com/sitemap.xml
 Sitemap: https://www.ytlabels.com/feed.xml
