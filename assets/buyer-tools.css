@@ -1,0 +1,44 @@
+/* Buyer resources: scoped styles shared by guides, tools and inquiry drafts. */
+.buyer-page { max-width:1180px; margin:0 auto; padding:48px 24px 80px; }
+.buyer-page > header { max-width:850px; margin-bottom:36px; }
+.buyer-page h1 { font-size:clamp(30px,4vw,46px); line-height:1.15; margin:10px 0 20px; }
+.buyer-page h2,.buyer-specs h2 { font-size:clamp(23px,3vw,30px); line-height:1.25; margin:0 0 16px; }
+.buyer-page p,.buyer-page li,.buyer-specs p { line-height:1.65; }
+.buyer-page > section { margin:36px 0; }
+.buyer-note { color:#596679; font-size:14px; }
+.buyer-page p a,.buyer-page td a,.buyer-specs td a { text-decoration:underline; text-underline-offset:3px; }
+.buyer-table { overflow-x:auto; border:1px solid #d6cebf; border-radius:10px; margin:20px 0; background:#fffdf8; }
+.buyer-table table { border-collapse:collapse; width:100%; min-width:580px; text-align:left; font-size:15px; line-height:1.55; }
+.buyer-table caption { padding:16px; text-align:left; font-weight:700; }
+.buyer-table th,.buyer-table td { padding:14px 18px; border-top:1px solid #d6cebf; vertical-align:top; }
+.buyer-table th { background:#eee9df; color:#0c2445; }
+.buyer-table td:first-child { font-weight:600; }
+.buyer-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; max-width:800px; }
+.buyer-form label { display:flex; flex-direction:column; gap:8px; font-weight:600; }
+.buyer-form input,.buyer-form select { width:100%; min-height:48px; padding:12px; border:1px solid #aaa18f; border-radius:6px; background:#fff; color:#0c2445; font:inherit; }
+.buyer-form button { justify-self:start; }
+.buyer-callout { background:#fffdf8; border:1px solid #d6cebf; border-left:4px solid #108c86; padding:20px; margin:24px 0; border-radius:8px; line-height:1.65; white-space:pre-line; }
+#calculation-result[data-error="true"] { border-left-color:#ad3029; }
+.guide-filters { display:flex; gap:10px; flex-wrap:wrap; margin:20px 0; }
+.guide-filters button { padding:11px 16px; border:1px solid #a69d8b; border-radius:6px; background:#fffdf8; color:#0c2445; font:inherit; font-weight:600; cursor:pointer; }
+.guide-filters button[aria-pressed="true"] { background:#0c2445; color:#fff; border-color:#0c2445; }
+.buyer-page .blog-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.buyer-page .blog-card { padding:24px; display:flex; flex-direction:column; align-items:flex-start; gap:10px; }
+.buyer-page .blog-card h3 { font-size:20px; line-height:1.35; margin:0; }
+.buyer-page .blog-card p { margin:0; }
+.buyer-page .blog-card .text-link { margin-top:auto; padding-top:10px; }
+#quote-draft { min-width:0; white-space:normal; }
+#quote-message { width:100%; resize:vertical; font:inherit; line-height:1.55; }
+#quote-draft .hero-actions { align-items:stretch; }
+#quote-draft .hero-actions > * { flex:0 1 auto; font-size:14px; }
+#quote-copy { background:#fffdf8; color:#0c2445; border:1px solid #a69d8b; }
+.buyer-page [hidden],#quote-draft[hidden] { display:none !important; }
+.buyer-page :focus-visible,.buyer-specs :focus-visible,#quote-form :focus-visible { outline:3px solid #108c86; outline-offset:3px; }
+@media(max-width:640px) {
+ .buyer-page { padding:32px 18px 90px; }
+ .buyer-form,.buyer-page .blog-grid { grid-template-columns:1fr; }
+ .buyer-page .blog-card { padding:20px; }
+ .buyer-table th,.buyer-table td { padding:12px; }
+ #quote-draft { padding:14px; }
+ #quote-draft .hero-actions { flex-direction:column; }
+}

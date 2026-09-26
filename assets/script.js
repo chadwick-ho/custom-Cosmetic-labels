@@ -6,13 +6,4 @@
     });
   }
 
-  document.querySelectorAll("form[data-quote-form]").forEach((form) => {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const button = form.querySelector("button[type='submit']");
-      const success = form.querySelector(".success");
-      if (button) button.textContent = "Requirements Sent";
-      if (success) success.hidden = false;
-    });
-  });
 })();
