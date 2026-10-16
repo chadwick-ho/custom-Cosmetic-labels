@@ -729,6 +729,12 @@ details {
   line-height: 1.6;
 }
 
+.comparison-summary {
+  max-width: 1000px;
+  margin: 24px auto 0;
+  line-height: 1.6;
+}
+
 .checklist-grid article {
   display: grid;
   grid-template-columns: auto 1fr;
