@@ -1,0 +1,40 @@
+﻿section,design_or_field,DIY_input,Outsourced_input,instruction
+scope,currency,,,Use the same currency and tax treatment; no automatic FX or calculations
+scope,comparison period,,,Use the same demand horizon and approved revision
+scope,component,,,One label component only; duplicate worksheet for additional components
+quantity,Design 1 required N,,,current required quantity
+quantity,Design 1 produced or supplied,,,count source or clearly marked forecast
+quantity,Design 1 unavailable,,,distinct rejects/setup/retained/unresolved; each label subtracted once
+quantity,Design 1 usable U,,,produced or supplied minus unavailable; nonnegative
+quantity,Design 1 covered,,,"min(N,U)"
+quantity,Design 1 gap,,,"max(N-U,0)"
+quantity,Design 1 surplus,,,"max(U-N,0)"
+quantity,Design 2 required N,,,current required quantity
+quantity,Design 2 produced or supplied,,,count source or clearly marked forecast
+quantity,Design 2 unavailable,,,distinct rejects/setup/retained/unresolved; each label subtracted once
+quantity,Design 2 usable U,,,produced or supplied minus unavailable; nonnegative
+quantity,Design 2 covered,,,"min(N,U)"
+quantity,Design 2 gap,,,"max(N-U,0)"
+quantity,Design 2 surplus,,,"max(U-N,0)"
+quantity,Design 3 required N,,,current required quantity
+quantity,Design 3 produced or supplied,,,count source or clearly marked forecast
+quantity,Design 3 unavailable,,,distinct rejects/setup/retained/unresolved; each label subtracted once
+quantity,Design 3 usable U,,,produced or supplied minus unavailable; nonnegative
+quantity,Design 3 covered,,,"min(N,U)"
+quantity,Design 3 gap,,,"max(N-U,0)"
+quantity,Design 3 surplus,,,"max(U-N,0)"
+cost_or_result,operating payments now Rcash,,,"actual supplies/ink or quote payments required now, preparation/delivery/relevant taxes; existing paid stock adds no payment now; exclude own labor/equipment"
+cost_or_result,operating run cost Rrun,,,"consumed supplies/ink or external quote attributed to this run, preparation/delivery/relevant taxes; unused supply inventory is not consumed; exclude own labor/equipment"
+cost_or_result,incremental labor payments now Lcash,,,paid labor cash due now; do not include unpaid time
+cost_or_result,paid labor attributed to run Lrun,,,"count paid hours/cost for this run once, regardless of payment date; exclude them from unpaid time"
+cost_or_result,unpaid time value T,,,chosen hours times chosen value; label as planning assumption
+cost_or_result,equipment purchase cash K,,,new equipment cash required now; existing paid-for equipment is not a new purchase
+cost_or_result,equipment allocation A,,,own equipment use allocated to this run; state allocation basis
+cost_or_result,cash needed now,,,Rcash+Lcash+K
+cost_or_result,planning cost,,,Rrun+Lrun+T+A; exclude full equipment purchase K
+cost_or_result,total usable,,,sum usable U by design
+cost_or_result,total covered,,,sum covered by design
+cost_or_result,total gap,,,sum gap; any positive gap blocks a complete route comparison
+cost_or_result,planning cost per usable,,,planning cost / total usable; undefined if denominator zero
+cost_or_result,planning cost per current need covered,,,planning cost / total covered; undefined if zero; compare only after all designs cover need
+release_gate,status,,,"Stop if any design short, major input unknown, acceptance unresolved or arrival unconfirmed; owner/operator/supplier resolves before selecting. Blank is unknown; zero only if explicitly applicable."
