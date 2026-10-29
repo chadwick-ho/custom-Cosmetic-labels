@@ -6,7 +6,7 @@
 .buyer-page p,.buyer-page li,.buyer-specs p { line-height:1.65; }
 .buyer-page > section { margin:36px 0; }
 .buyer-note { color:#596679; font-size:14px; }
-.buyer-page p a,.buyer-page td a,.buyer-specs td a { text-decoration:underline; text-underline-offset:3px; }
+.buyer-page p a,.buyer-page td a,.buyer-page li a,.buyer-specs td a { text-decoration:underline; text-underline-offset:3px; }
 .buyer-table { overflow-x:auto; border:1px solid #d6cebf; border-radius:10px; margin:20px 0; background:#fffdf8; }
 .buyer-table table { border-collapse:collapse; width:100%; min-width:580px; text-align:left; font-size:15px; line-height:1.55; }
 .buyer-table caption { padding:16px; text-align:left; font-weight:700; }
