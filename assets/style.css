@@ -1461,6 +1461,18 @@ details p {
   line-height: 1.18;
 }
 
+.material-tile figcaption strong a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--teal);
+  text-underline-offset: 3px;
+}
+
+.material-tile figcaption strong a:hover,
+.material-tile figcaption strong a:focus-visible {
+  color: var(--teal);
+}
+
 .material-tile figcaption p {
   margin: 2px 0 0;
   color: #59697d;
