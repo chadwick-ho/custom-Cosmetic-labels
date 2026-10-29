@@ -17,5 +17,8 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+# LLM site summary
+LLMs: /llms.txt
+
 Sitemap: https://www.ytlabels.com/sitemap.xml
 Sitemap: https://www.ytlabels.com/feed.xml
