@@ -1,0 +1,9 @@
+/* Proportional buying-guide figures; versioned for immutable asset caching. */
+.article-page .article-body figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
